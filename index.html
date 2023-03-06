@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" />
+    <title>SGUL ISoc Squash Society Sign-up form</title>
+</head>
+
+<body>
+    <header>
+    <img id="logo" src="https://scontent-lcy1-2.xx.fbcdn.net/v/t39.30808-6/308391289_421077606817371_4329614716287484762_n.png?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=1nrUVU7wlk4AX8qGdcH&_nc_ht=scontent-lcy1-2.xx&oh=00_AfCK3z7iqw-7ZpigFon6W5RKZ-NBbL5PfSZknfRO7XgOZg&oe=63F57985">
+
+    <h1> SGUL ISoc Squash Society Membership form</h1>
+
+    <nav>
+        <ul>
+            <li>Full Name</li>
+            <li>Course</li>
+            <li>Proficiency</li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <form method="post"> 
+            <section role="region" aria-labelledby="student-info">
+                <h2 id="student-info">Student Info</h2> 
+                <div class="info">
+                    <label for="student-name">Full Name:</label>
+                    <input type="text" name="student-name" id="student-name"/>
+                </div>
+                <div class="info">
+                    <label for="student-email">M number: </label>
+                    <input type="email" id="student-email" id="student-email"/>
+                </div>
+
+                <div class="info">
+                    <label for="course">Course<span sr="sr-only"> (include Year of study)</span></label>
+                    <input type="text" name="course" id="course"/>
+                </div>
+            </section>
+        <section role="region" aria-labelledby="squash-questions">
+            <div class="question-block">
+                
+                <fieldset class="question" name="q1">
+                    <legend>Are you a member of SGUL ISoc</legend>
+                    <ul class="answers-list">
+                        <li>
+                            <label for="q1-a1">
+                                <input type="radio" name="q1" id="q1-a1" value="yes">
+                                Yes 
+                            </label>
+                        </li>
+                        <li>
+                            <label for="q1-a2">
+                                <input type="radio" name="q1" id="q1-a2" value="no">
+                                No
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+        </section>
+        <section role="region" aria-labelledby="experince">
+            <div class="formrow">
+                <div class="question-block">
+                    <label for="customer">What's your level of experience as a squash player?</label>
+                </div>
+                <div class="answer">
+                    <select name="customer" id="customer" required>
+                        <option value="">Select an option</option>
+                        <option value="1">None</option>
+                        <option value="2">0-12 months</option>
+                        <option value="3">1-2 years</option>
+                        <option value="4">2 years+</option>
+                    </select>
+                </div>
+                <div class="question-block"></div>
+                <label for="subs">Have you paid subs? (Details found at the top of this form)</label>
+            </div>
+            <div class="answer">
+                <select name="subs" id="subs" required>
+                    <option value="sel">Select an option</option>
+                    <option value="y">Yes </option>
+                    <option value="n">Not yet</option>
+                </select>
+            </div>
+            <div class="question-block">
+                <label for="questions">Do you have any queries or suggestions?</label>
+            </div>
+            <div class="answer">
+                <textarea name="questions" id="questions" cols="24" rows="5" placeholder="Queries/Suggestions"></textarea>
+            </div>
+            </div>
+        </section>
+        <button type="submit">Send</button>
+        </form>
+
+    <footer>
+        <a href="https://www.instagram.com/sgulisoc/">SGUL ISoc Instagram</a><br>
+        Robert Lowe Center <br>
+        St. George's University of London
+    </footer>
+    </main>
+
+</body>
+</html>
