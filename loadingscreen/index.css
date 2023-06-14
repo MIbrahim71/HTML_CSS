@@ -13,14 +13,15 @@ body {
 
 #text {
     
-    max-width: 50%;
+    max-width: 100%;
     text-align: center;
     
 }
 
 h1 {
-    color: burlywood;
+    color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
 }
 
 #load {
