@@ -1,4 +1,6 @@
 # HTML-and-CSS
 
 
-SGUL ISoc Squash Membership Form beta
+All HTML and CSS practice 
+
+Start: June 2023
