@@ -137,13 +137,14 @@ header {
 
 .work {
     position: absolute;
-    left: 180px;
-    bottom: 100px;
+    right: 100px;
+    bottom: 0;
+    margin: 40px auto;
     
 }
 
 .work a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: bold;
     padding-right: 15px;
@@ -151,7 +152,7 @@ header {
 }
 
 .work a:hover {
-    color: white;
+    color: #00bf9f;;
     transition: .3s;
 }
 
