@@ -2,7 +2,7 @@
     border: none;
     padding: none;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -37,10 +37,12 @@ h1 {
 
 .input-buttons {
     text-align: center;
+    width: 80%;
 }
 
 input {
-    width: 280px;
+     
+    width: 100%;
     padding: 5px 60px;
     font-size: 15px;
     margin: 10px 5px;
