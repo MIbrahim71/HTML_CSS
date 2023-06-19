@@ -19,7 +19,7 @@ img {
 #container {
     border: 2px solid white;
     margin: 200px auto;
-    width: 20%;
+    width: 18%;
     height: 50%;
     border-radius: 20px;
     z-index: 1;
@@ -60,10 +60,9 @@ input {
 }
 
 #mid-section {
-    width: 300px;
-   
     color: white;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     
 }
@@ -92,6 +91,12 @@ a{
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 30px;
+}
+
+#login-button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    transition: .3s;
 }
 
 #sign-up {
