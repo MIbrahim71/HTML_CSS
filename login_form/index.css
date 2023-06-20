@@ -3,6 +3,7 @@
     padding: none;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
 
@@ -17,14 +18,18 @@ img {
 }
 
 #container {
-    border: 2px solid white;
+    border: 2px solid rgba(257, 257, 257, 0.7);
+    backdrop-filter: blur(20px);
     margin: 200px auto;
     width: 20%;
-    height: 50%;
+    height: 530px;
+    max-width: 450px;
     border-radius: 20px;
     z-index: 1;
     display: flex;
+    align-items: center;
     justify-content: center;
+    background: transparent;
 }
 
 
@@ -33,11 +38,19 @@ h1 {
     text-align: center;
     color: white;
     font-weight: bold;
+    font-size: 42px;
 }
 
 .input-buttons {
     text-align: center;
     width: 80%;
+
+}
+
+.input-buttons label {
+    position: absolute;
+    top: 50%;
+    left: 6px;
 }
 
 input {
