@@ -8,11 +8,182 @@
     <title>Sunset</title>
 </head>
 
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+         
+    }
+
+    #sky,
+    #water {
+        height: 50vh;
+        position: relative;
+    }
+    
+    #sky {
+        background: linear-gradient(to bottom, mediumorchid, lavender);
+    }
+
+    #sky::after {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: white;
+        content: "";
+        filter: blur(2px);
+        z-index: 10;
+    }
+
+    #water {
+        background: linear-gradient(to bottom, aquamarine, skyblue);
+        z-index: 30;
+    }
+
+    #sun {
+        height: 30vmin;
+        width: 30vmin;
+        position: absolute;
+        left: 50%;
+        background: linear-gradient(to bottom, gold, darkorange);
+        border-radius: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+        animation: rise 10s ease-in-out infinite;
+    }
+
+    @keyframes rise {
+        0% {
+            bottom: 0;
+            box-shadow: 0 0 25px 14px orange;
+        }
+        100% {
+            bottom: 130vh;
+            box-shadow: 0 0 25px 14px white;
+        }
+    }
+    
+    .water-sunrise {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 200%;
+        background: radial-gradient(circle at 50% -30%, hsl(2, 100%, 65%), transparent);
+        transform: translateX(-25%);
+        mix-blend-mode: color-burn;
+        animation: sunrise 10s ease-in-out infinite;
+    }
+
+    @keyframes sunrise {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .water-circle,
+    .water-circle-1,
+    .water-circle-2,
+    .water-circle-3,
+    .water-circle-4,
+    .water-circle-5,
+    .water-circle-6 {
+        position: absolute;
+        height: 5vmin;
+        width: 8vmin;
+        border-radius: 50%;
+        border: 1.5px solid white;
+        animation: splash 9s infinite;
+        transform: scale(0);
+    }
+
+    .water-circle::before,
+    .water-circle::after {
+        position: absolute;
+        content: "";
+        inset: 0;
+        border: 1.5px solid white;
+        animation: splash 9s infinite;
+        transform: scale(0);
+    }
+
+    .circle-1 {top: 24%; left: 16%;}
+    .circle-2 {top: 53%; left: 90%;}
+    .circle-3 {top: 66%; left: 40%;}
+
+
+    @keyframes splash {
+        0% {}
+        50%, 
+        100% {
+            opacity: 0;
+            transform: scale(1);
+        }
+    }
+
+    .water-circle {
+        animation-delay: 1s;
+    }
+    .water-circle-1 {
+        animation: 1.5s;
+    }
+    .water-circle-2 {
+        animation: 2s;
+    }
+
+    .cloud {
+        position: absolute;
+        width: 60vmin;
+        height: 6vmin;
+        color: hsla(150, 10%, 75%, 0.8);
+        background: currentColor;
+        top: 15vmin;
+        left: 20vmin;
+        border-radius: 50%;
+        box-shadow: 30vmin 0.5min 0 -1vmin currentColor,
+        -25vmin 0 0 -0.5vmin currentColor;
+        opacity: 0.2;
+    }
+
+
+
+</style>
 
 
 <body>
     
+<div id="sky">
+    <div class="cloud"></div>
+</div>
+<div id="water">
+    <div class="water-sunrise"></div>
+    <div class="water-circle circle-1"></div>
+    <div class="water-circle circle-2"></div>
+    <div class="water-circle circle-3"></div>
+    <div class="water-circle-1 circle-1"></div>
+    <div class="water-circle-2 circle-1"></div>
+    <div class="water-circle-3 circle-2"></div>
+    <div class="water-circle-4 circle-2"></div>
+    <div class="water-circle-5 circle-3"></div>
+    <div class="water-circle-6 circle-3"></div>
+</div>
 
+<div id="sun"></div>
 
 
 
